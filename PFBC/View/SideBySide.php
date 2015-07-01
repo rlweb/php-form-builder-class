@@ -36,7 +36,7 @@ class SideBySide extends \PFBC\View {
             else {
 				$element->appendAttribute("class", "form-control");
 				if (!$prevElement->getAttribute("shared"))
-					echo '<div class="form-group">', $this->renderLabel($element), '<div class="col-md-6">';
+					echo '<div class="form-group">', $this->renderLabel($element), '<div class="col-md-10">';
 				echo $element->render(), $this->renderDescriptions($element);
 				if (!$element->getAttribute("shared"))
 					echo '</div></div>';
@@ -52,7 +52,7 @@ class SideBySide extends \PFBC\View {
 	protected function renderLabel(\PFBC\Element $element) {
         $label = $element->getLabel();
         if(!empty($label)) {
-			echo '<label class="col-md-4 control-label" for="', $element->getAttribute("id"), '">';
+			echo '<label class="col-md-2 control-label" for="', $element->getAttribute("id"), '">';
 			if($element->isRequired())
 				echo '<span class="required">* </span>';
 			echo $label, '</label>'; 
