@@ -15,8 +15,9 @@ class SideBySide extends \PFBC\View {
 		$elementCount = 0;
 		for($e = 0; $e < $elementSize; ++$e) {
 			$element = $elements[$e];
-			$prevElement = $elements[$e-1];
-			if (!$prevElement){
+			if(isset($elements[$e-1])){
+				$prevElement = $elements[$e-1];
+			}else{
 				$prevElement = new \PFBC\Element\HTML("");
 			}
 
