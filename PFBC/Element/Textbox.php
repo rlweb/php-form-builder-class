@@ -9,9 +9,9 @@ class Textbox extends \PFBC\Element {
 	public function render() {
 		$addons = array();
 		if(!empty($this->prepend))
-			$addons[] = "input-prepend";
+			$addons[] = "input-group";
 		if(!empty($this->append))
-			$addons[] = "input-append";
+			$addons[] = "input-group";
 		if(!empty($addons))
 			echo '<div class="', implode(" ", $addons), '">';
 
